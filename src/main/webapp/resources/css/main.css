@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+
+body {
+  padding: 0 7%;
+  text-align: center;
+}
+
+.col-content {
+  background-color: #efefef;
+  padding: 1em;
+  border-radius: 0.5em;
+}
+
+.columns {
+  margin: 10px 0;
+}
+
+.nested {
+  background: lightgray;
+  border-radius: 0.5em;
+}
+
+.card-meta {
+	text-align: right;
+}
+
+.card-body {
+	text-align: left;
+}
