@@ -1,8 +1,56 @@
 @CHARSET "UTF-8";
 
+@font-face {
+	font-family: 'ikamodoki';
+	src: url(../fonts/ikamodoki1_0.ttf);
+}
+.ikamodoki {
+	font-family: ikamodoki;
+}
+
+html {
+  height: 100%;
+}
+
 body {
-  padding: 0 7%;
-  text-align: center;
+	background-color: #fff;
+	height: 100%;
+	text-align: center;
+}
+
+/* これが原因でフレームワークに悪影響を及ぼす可能性もあるから気をつける */
+button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        appearance: none;
+}
+
+#top-menu {
+	background-color: rgba(0,0,0,0.9);
+	line-height: 60px;
+	padding: 0 2%;
+	height: 60px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3;
+}
+
+/* -------------------------------------メインコンテナ------------------------------------- */
+.container {
+	background-color: #fff;
+	padding: 70px 7% 0;
+	background-color: #fff;
+	position: relative;
+	width: 100%;
+	height: auto;
+	z-index: 1;
+	-webkit-transition: all .5s ease;
+	transition: all .5s ease;
 }
 
 .col-content {
@@ -27,3 +75,125 @@ body {
 .card-body {
 	text-align: left;
 }
+
+.card-image {
+	height: 250px;
+	overflow: hidden;
+}
+
+/* -------------------------------------サイドメニュー------------------------------------- */
+.side-menu {
+	max-width: 100vw;
+}
+
+#profile {
+	margin: 5px 5px 0;
+	background-color: #0A1322;
+	color: #E3E3E3;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	-ms-border-radius: 10px;
+ 	border-radius: 10px;
+}
+#profile h2 {
+	padding-left: 110px;
+	border-bottom: solid 2px;
+	padding-bottom: 3px;
+	font-size: 20px;
+	font-family: ikamodoki;
+}
+
+/* -------------------------------------ユーザーアイコン------------------------------------- */
+.icon {
+	position: absolute;
+	top: 195px;
+
+}
+.icon img {
+	overflow: hidden;
+	margin: 0 auto;
+	border: solid 5px #0A1322;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-o-border-radius: 100px;
+	-ms-border-radius: 100px;
+ 	border-radius: 100px;
+  	height: 100px;
+  	width: 100px;
+}
+
+/* -------------------------------------チームアイコン------------------------------------- */
+.teamIcon {
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	top: 320px;
+	right: 30px;
+	text-align: center;
+}
+.teamIcon img {
+	max-height: 80px;
+	max-width: 80px;
+	
+}
+.teamIcon p {
+	text-align: center;
+	margin: 0;
+}
+
+/* -------------------------------------プロフィール欄設計(青い名刺状の部分)------------------------------------- */
+.profile-body {
+	padding: 0 15px 15px;
+}
+
+.profile-body span {
+	font-size: 20px;
+	font-family: ikamodoki;
+}
+
+/* プロフィールのアカウント左の縦線 */
+blockquote {
+	padding: 3px 3px;
+	margin: 10px 0;
+	border-left: 2px solid #E3E3E3
+}
+
+/* -------------------------------------名刺部分以下のプロフィール------------------------------------- */
+#otherInfo {
+	padding: 15px 15px 0;
+}
+
+.introduction h2,
+.Trophy h2 {
+	font-size: 28px;
+	font-family: ikamodoki;
+}
+
+/* 矢印 */
+.left-arrow {
+	position: relative;
+	top: 80px;
+	left: 10px;
+}
+
+/* トロフィー関連 */
+.trophy-card {
+	border: .1rem solid #f0f1f4;
+	border-radius: 5px; 
+}
+.trophy-image {
+	height: auto;
+	width: 100%;
+}
+.trophy-image img {
+	border-radius: 5px 5px 0 0;
+}
+.trophy-title {
+	font-size: 18px;
+	text-align: center;
+}
+.ranking {
+	text-align: center;
+}
+
