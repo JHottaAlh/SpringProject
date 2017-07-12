@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "jp.co.ika.mapper.UserMapper">
+
+    <resultMap id = "UserResult" type = "jp.co.ika.entity.UserEntity">
+        <result column = "id" property = "id" />
+        <result column = "token_id" property = "token_id" />
+        <result column = "twitter_id" property = "twitter_id" />
+        <result column = "NNID" property = "NNID" />
+        <result column = "user_name" property = "user_name" />
+        <result column = "password" property = "password" />
+        <result column = "wepon" property = "wepon" />
+        <result column = "area" property = "area" />
+        <result column = "yagura" property = "yagura" />
+        <result column = "hoko" property = "hoko" />
+        <result column = "team_id" property = "team_id" />
+        <result column = "icon" property = "icon" />
+    </resultMap>
+    
+    <select id = "getUser" resultMap = "UserResult" parameterType = "map">
+        select *
+        from users
+        where user_name = #{ user_name } AND password = #{ password }
+    </select>
+    
+</mapper>
