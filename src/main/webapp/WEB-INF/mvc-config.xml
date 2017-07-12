@@ -40,7 +40,7 @@
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <property name="url" value="jdbc:mysql://localhost/ika" />
         <property name="username" value="root" />
-        <property name="password" value="alhincPPA7Xn24" />
+        <property name="password" value="MySQLパスワード" />
     </bean>
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
